@@ -35,13 +35,14 @@ img{max-width:100%;display:block}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1rem 0}
 .brand{display:flex;align-items:center;gap:.9rem;color:var(--ink);font-weight:800;font-size:1rem}
 .brand img{height:46px;width:auto;border-radius:12px}
-.nav-tools{display:flex;align-items:center;gap:1rem}
+.nav-tools{display:flex;align-items:center;justify-content:flex-start;gap:1rem;flex:1}
 .brand-mark{
   width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
   background:linear-gradient(135deg,var(--accent),#5a84a8);color:#fff;font-weight:800;
 }
 .brand-text{letter-spacing:.01em}
 .main-nav ul{display:flex;flex-wrap:wrap;gap:.75rem;list-style:none;margin:0;padding:0}
+.main-nav{margin-left:auto}
 .main-nav a{
   display:inline-flex;align-items:center;justify-content:center;
   padding:.7rem 1rem;border-radius:999px;color:var(--ink);font-weight:600;
