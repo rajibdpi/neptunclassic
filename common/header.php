@@ -31,7 +31,7 @@ $titleParts[] = option('site_title');
     <div class="container topbar">
         <div class="brand-wrap">
             <?php $logo = get_theme_option('logo'); ?>
-            <a class="brand" href="<?php echo link_to_home_page(theme_logo()); ?>">
+            <a class="brand" href="<?php echo html_escape(url('/')); ?>">
                 <?php if ($logo): ?>
                     <img src="<?php echo html_escape($logo); ?>" alt="<?php echo html_escape(option('site_title')); ?>">
                 <?php else: ?>
