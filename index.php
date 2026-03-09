@@ -97,21 +97,4 @@ if (!$featuredCollections) {
 </section>
 <?php endif; ?>
 
-<section class="section-wrap">
-    <div class="container info-band">
-        <div class="info-box">
-            <h3>IIIF ready</h3>
-            <p>Add a IIIF manifest URL to <strong>Dublin Core → Identifier</strong> or <strong>Relation</strong> and the item page will auto-load a Universal Viewer iframe.</p>
-        </div>
-        <div class="info-box">
-            <h3>Research friendly</h3>
-            <p>The layout keeps the viewer, metadata, description, and citation area visible in a clean archival reading experience.</p>
-        </div>
-        <div class="info-box">
-            <h3>Plugin compatible</h3>
-            <p>Works well with Foundation as a base and pairs naturally with Simple Pages, Exhibit Builder, Universal Viewer, and IIIF Toolkit.</p>
-        </div>
-    </div>
-</section>
-
 <?php echo foot(); ?>
