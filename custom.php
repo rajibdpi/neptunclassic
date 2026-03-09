@@ -19,14 +19,14 @@ function neptunclassic_theme_file_url($name, $default = '')
         return $default;
     }
 
-    if (preg_match('~^(?:https?:)?//~i', $value) || strpos($value, '/') === 0) {
-        return html_entity_decode($value, ENT_QUOTES, 'UTF-8');
+    try {
+        $storage = Zend_Registry::get('storage');
+        return $storage->getUri($storage->getPathByType($value, 'theme_uploads'));
+    } catch (Exception $e) {
+        return $default;
+    } catch (Error $e) {
+        return $default;
     }
-
-    $storage = Zend_Registry::get('storage');
-    $path = $storage->getPathByType($value, 'theme_uploads');
-
-    return $storage->getUri($path);
 }
 
 function neptunclassic_asset_url($path)
