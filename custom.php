@@ -3,7 +3,11 @@
 function neptunclassic_theme_option($name, $default = '')
 {
     $value = get_theme_option($name);
-    return strlen(trim((string) $value)) ? $value : $default;
+    if (!strlen(trim((string) $value))) {
+        $value = $default;
+    }
+
+    return html_entity_decode((string) $value, ENT_QUOTES, 'UTF-8');
 }
 
 function neptunclassic_asset_url($path)
