@@ -50,19 +50,19 @@ img{max-width:100%;display:block}
 }
 .main-nav a:hover,.main-nav .current a{background:#eef3f7}
 .nav-search{
-  display:grid;grid-template-columns:minmax(360px,560px) auto;gap:1.1rem;align-items:center;
-  padding:.65rem .75rem;border:2px solid #cfd8e1;border-radius:999px;background:#f3f4f6;
+  display:grid;grid-template-columns:minmax(200px,280px) auto;gap:.6rem;align-items:center;
+  padding:.28rem .32rem .28rem .6rem;border:1px solid #d5dde6;border-radius:999px;background:#f7f9fb;
   box-shadow:0 1px 0 rgba(255,255,255,.85) inset
 }
 .nav-search input{
-  min-width:0;padding:1rem 1.35rem;border:0;border-radius:999px;background:transparent;color:#666d75;
-  font-size:1.05rem;font-weight:500;outline:0
+  min-width:0;padding:.45rem .35rem;border:0;border-radius:999px;background:transparent;color:#5d6975;
+  font-size:.92rem;font-weight:500;outline:0
 }
 .nav-search button{
-  min-height:56px;padding:0 2rem;border:1px solid transparent;border-radius:999px;background:#245686;color:#fff;font-size:1rem;font-weight:700;cursor:pointer
+  min-height:38px;padding:0 .95rem;border:1px solid transparent;border-radius:999px;background:#245686;color:#fff;font-size:.88rem;font-weight:700;cursor:pointer
 }
 .nav-search button:hover{background:#1b476f}
-.nav-search input::placeholder{color:#767676;opacity:1;font-size:1.05rem;font-weight:500}
+.nav-search input::placeholder{color:#7a8590;opacity:1;font-size:.92rem;font-weight:500}
 
 .site-main{min-height:70vh}
 .hero{padding:4.5rem 0 2.75rem}
