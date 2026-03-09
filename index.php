@@ -4,7 +4,7 @@ $badge = neptunclassic_theme_option('hero_badge', 'Digital Archive');
 $title = neptunclassic_theme_option('hero_title', option('site_title'));
 $text  = neptunclassic_theme_option('hero_text', option('description'));
 $placeholder = neptunclassic_theme_option('search_placeholder', 'Search the archive');
-$heroImage = get_theme_option('hero_image');
+$heroImage = neptunclassic_theme_file_url('hero_image', img('hero.jpg'));
 $featuredItemsTitle = neptunclassic_theme_option('featured_items_title', 'Featured items');
 $featuredCollectionsTitle = neptunclassic_theme_option('featured_collections_title', 'Curated sets');
 $featuredCount = (int) neptunclassic_theme_option('featured_items_count', 6);
@@ -42,7 +42,7 @@ if (!$featuredCollections) {
         </div>
 
         <div class="hero-panel">
-            <img src="<?php echo html_escape($heroImage ? $heroImage : img('hero.jpg')); ?>" alt="Archive preview">
+            <img src="<?php echo html_escape($heroImage); ?>" alt="Archive preview">
         </div>
     </div>
 </section>
