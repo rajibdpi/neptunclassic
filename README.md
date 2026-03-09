@@ -31,6 +31,11 @@ Recommended plugins
 
 Installation
 ------------
+Download the theme archive with:
+```sh
+wget https://github.com/rajibdpi/neptunclassic/archive/refs/heads/main.zip && mv main.zip neptunclassic.zip && unzip neptunclassic.zip
+```
+
 1. Upload the folder 'neptunclassic' into your Omeka Classic /themes directory.
 2. In Omeka admin, go to Appearance > Themes.
 3. Activate 'Neptun Classic'.
