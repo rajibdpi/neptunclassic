@@ -36,8 +36,8 @@ $titleParts[] = option('site_title');
                     <?php echo $logo; ?>
                 <?php else: ?>
                     <span class="brand-mark">N</span>
+                    <span class="brand-text"><?php echo html_escape(option('site_title')); ?></span>
                 <?php endif; ?>
-                <span class="brand-text"><?php echo html_escape(option('site_title')); ?></span>
             </a>
         </div>
 
