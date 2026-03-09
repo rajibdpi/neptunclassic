@@ -4,8 +4,17 @@ queue_css_file('neptun');
 queue_js_file('theme');
 $accent = neptunclassic_theme_option('accent_color', '#1f4e79');
 queue_css_string(':root{--accent:' . $accent . ';}');
-echo head(array('bodyclass' => body_class()));
 ?>
+<!DOCTYPE html>
+<html lang="<?php echo get_html_lang(); ?>">
+<head>
+    <?php echo head_meta(); ?>
+    <title><?php echo head_title(); ?></title>
+    <?php echo head_css(); ?>
+    <?php echo head_js(); ?>
+    <?php echo plugin_header(); ?>
+</head>
+<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 <header class="site-header">
     <div class="container topbar">
         <div class="brand-wrap">

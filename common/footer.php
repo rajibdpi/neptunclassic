@@ -12,4 +12,6 @@
         </div>
     </div>
 </footer>
-<?php echo foot(); ?>
+<?php echo plugin_footer(); ?>
+</body>
+</html>
