@@ -12,11 +12,12 @@ $titleParts[] = option('site_title');
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo get_html_lang(); ?>">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php if ($description = option('description')): ?>
-    <meta name="description" content="<?php echo html_escape($description); ?>">
+        <meta name="description" content="<?php echo html_escape($description); ?>">
     <?php endif; ?>
     <title><?php echo implode(' · ', $titleParts); ?></title>
     <?php echo auto_discovery_link_tags(); ?>
@@ -30,7 +31,7 @@ $titleParts[] = option('site_title');
     <div class="container topbar">
         <div class="brand-wrap">
             <?php $logo = get_theme_option('logo'); ?>
-            <a class="brand" href="<?php echo html_escape(public_url()); ?>">
+            <a class="brand" href="<?php echo link_to_home_page(theme_logo()); ?>">
                 <?php if ($logo): ?>
                     <img src="<?php echo html_escape($logo); ?>" alt="<?php echo html_escape(option('site_title')); ?>">
                 <?php else: ?>

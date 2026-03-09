@@ -144,6 +144,12 @@ img{max-width:100%;display:block}
 .prose{color:#263342}
 .prose p:first-child{margin-top:0}
 .prose p:last-child{margin-bottom:0}
+.simple-page-shell{max-width:920px}
+.simple-page-card{margin-bottom:0;padding:1.6rem 1.7rem}
+.simple-page-header{margin-bottom:1.2rem}
+.simple-page-header h1{margin:.75rem 0 0;font-size:clamp(2rem,3vw,3rem);line-height:1.08;letter-spacing:-.03em}
+.simple-page-content > *:first-child{margin-top:0}
+.simple-page-content > *:last-child{margin-bottom:0}
 
 .site-footer{margin-top:2rem;border-top:1px solid #dde4ea;background:#fff}
 .footer-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:2rem;padding:2rem 0}
