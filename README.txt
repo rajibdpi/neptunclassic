@@ -36,6 +36,11 @@ Installation
 3. Activate 'Neptun Classic'.
 4. Open theme configuration and set logo, accent color, hero title, and hero text.
 
+Compatibility
+-------------
+- Tested with Omeka Classic 3.2
+- Keeps `omeka_minimum_version = 3.0` so existing 3.x installs can still use the theme
+
 Optional workflow for local IIIF
 --------------------------------
 If you use a IIIF plugin or external image server, paste the manifest URL into
