@@ -33,7 +33,9 @@ Installation
 ------------
 Download the theme archive with:
 ```sh
-wget https://github.com/rajibdpi/neptunclassic/archive/refs/heads/main.zip && mv main.zip neptunclassic.zip && unzip neptunclassic.zip
+wget https://github.com/rajibdpi/neptunclassic/archive/refs/heads/main.zip \
+&& mv main.zip neptunclassic.zip \
+&& unzip -o neptunclassic.zip
 ```
 
 1. Upload the folder 'neptunclassic' into your Omeka Classic /themes directory.
