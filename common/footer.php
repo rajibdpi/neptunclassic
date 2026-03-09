@@ -12,6 +12,6 @@
         </div>
     </div>
 </footer>
-<?php echo plugin_footer(); ?>
+<?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 </body>
 </html>
