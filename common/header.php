@@ -42,6 +42,7 @@ $titleParts[] = option('site_title');
         </div>
 
         <div class="nav-tools">
+            <?php if (get_theme_option('show_nav_search')): ?>
             <form class="nav-search" role="search" action="<?php echo html_escape(url('items/browse')); ?>" method="get">
                 <label class="screen-reader-text" for="nav-search-input">Search archive</label>
                 <input id="nav-search-input" type="search" name="search" value="<?php echo isset($_GET['search']) ? html_escape($_GET['search']) : ''; ?>" placeholder="<?php echo html_escape(neptunclassic_theme_option('search_placeholder', 'Search the archive')); ?>">
@@ -52,6 +53,7 @@ $titleParts[] = option('site_title');
                     </svg>
                 </button>
             </form>
+            <?php endif; ?>
             <nav class="main-nav" aria-label="Primary">
                 <?php echo public_nav_main(); ?>
             </nav>
