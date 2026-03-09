@@ -89,3 +89,48 @@ function neptunclassic_record_thumb($record, $size = 'square_thumbnail')
 
     return '<div class="thumb-fallback"><span>No image</span></div>';
 }
+
+function neptunclassic_total_records($recordType)
+{
+    if (function_exists('total_records')) {
+        return (int) total_records($recordType);
+    }
+
+    return 0;
+}
+
+function neptunclassic_document_types()
+{
+    return array(
+        array(
+            'label' => __('Manuscripts'),
+            'description' => __('Handwritten records, notebooks, and archival papers.'),
+            'href' => url('items/browse'),
+        ),
+        array(
+            'label' => __('Photographs'),
+            'description' => __('Visual documentation, portraits, and field photography.'),
+            'href' => url('items/browse'),
+        ),
+        array(
+            'label' => __('Maps'),
+            'description' => __('Cartographic materials, plans, and geographic records.'),
+            'href' => url('items/browse'),
+        ),
+        array(
+            'label' => __('Printed Works'),
+            'description' => __('Books, journals, pamphlets, and reference publications.'),
+            'href' => url('items/browse'),
+        ),
+        array(
+            'label' => __('Posters'),
+            'description' => __('Exhibition graphics, announcements, and ephemera.'),
+            'href' => url('items/browse'),
+        ),
+        array(
+            'label' => __('Audio & Exhibits'),
+            'description' => __('Interpretive resources, podcasts, and virtual exhibits.'),
+            'href' => url('items/browse'),
+        ),
+    );
+}
