@@ -1,9 +1,12 @@
 <?php
 $isHomePage = function_exists('simple_pages_is_home_page') ? simple_pages_is_home_page($page) : false;
+$title = metadata('simple_pages_page', 'title');
+$text = metadata('simple_pages_page', 'text', array('no_escape' => true));
+
 echo head(array(
-    'title' => $isHomePage ? null : html_escape($page->title),
+    'title' => $isHomePage ? null : $title,
     'bodyclass' => 'simple-pages show',
-    'bodyid' => html_escape($page->slug),
+    'bodyid' => metadata('simple_pages_page', 'slug'),
 ));
 ?>
 
@@ -13,12 +16,17 @@ echo head(array(
             <?php if (!$isHomePage): ?>
             <header class="simple-page-header">
                 <p class="hero-badge">Page</p>
-                <h1><?php echo html_escape($page->title); ?></h1>
+                <?php if (function_exists('simple_pages_display_breadcrumbs')): ?>
+                    <p id="simple-pages-breadcrumbs" class="navigation secondary-nav">
+                        <?php echo simple_pages_display_breadcrumbs(); ?>
+                    </p>
+                <?php endif; ?>
+                <h1><?php echo html_escape($title); ?></h1>
             </header>
             <?php endif; ?>
 
             <div class="prose simple-page-content">
-                <?php echo eval('?>' . $page->text); ?>
+                <?php echo $this->shortcodes($text); ?>
             </div>
         </article>
     </div>
