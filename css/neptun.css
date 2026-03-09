@@ -35,6 +35,7 @@ img{max-width:100%;display:block}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1rem 0}
 .brand{display:flex;align-items:center;gap:.9rem;color:var(--ink);font-weight:800;font-size:1rem}
 .brand img{height:46px;width:auto;border-radius:12px}
+.nav-tools{display:flex;align-items:center;gap:1rem}
 .brand-mark{
   width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
   background:linear-gradient(135deg,var(--accent),#5a84a8);color:#fff;font-weight:800;
@@ -46,6 +47,14 @@ img{max-width:100%;display:block}
   padding:.7rem 1rem;border-radius:999px;color:var(--ink);font-weight:600;
 }
 .main-nav a:hover,.main-nav .current a{background:#eef3f7}
+.nav-search{display:grid;grid-template-columns:minmax(180px,240px) auto;gap:.55rem;align-items:center}
+.nav-search input{
+  min-width:0;padding:.7rem .9rem;border:1px solid #d6dee5;border-radius:999px;background:#fff;color:var(--ink)
+}
+.nav-search button{
+  padding:.7rem 1rem;border:1px solid transparent;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer
+}
+.nav-search button:hover{background:var(--accent-2)}
 
 .site-main{min-height:70vh}
 .hero{padding:4.5rem 0 2.75rem}
@@ -174,6 +183,8 @@ form ul, .element-set{padding-left:0}
 @media (max-width: 680px){
   .topbar,.section-head,.archive-toolbar,.pagination-bottom{display:block}
   .main-nav{margin-top:1rem}
+  .nav-tools{display:block}
+  .nav-search{grid-template-columns:1fr;margin-top:1rem}
   .main-nav ul{gap:.45rem}
   .search-shell,.search-shell-inline{grid-template-columns:1fr}
   .card-grid,.card-grid-collections{grid-template-columns:1fr}
