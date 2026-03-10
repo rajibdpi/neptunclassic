@@ -1,14 +1,15 @@
 <?php
 $collectionId = metadata('collection', 'id');
+$collectionTitle = metadata('collection', array('Dublin Core', 'Title'));
 $collectionItems = get_records('Item', array('collection' => $collectionId), 0);
-echo head(array('title' => metadata('collection', array('Dublin Core', 'Title')), 'bodyclass' => 'collections show'));
+echo head(array('title' => $collectionTitle, 'bodyclass' => 'collections show'));
 ?>
 <section class="section-wrap">
     <div class="container">
         <div class="section-head">
             <div>
                 <p class="section-kicker">Collection Items</p>
-                <h2>Items in this collection</h2>
+                <h2>Items in <?php echo html_escape($collectionTitle); ?></h2>
             </div>
         </div>
         <?php if ($collectionItems): ?>
