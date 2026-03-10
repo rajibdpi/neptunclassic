@@ -9,7 +9,7 @@ echo head(array('title' => $collectionTitle, 'bodyclass' => 'collections show'))
         <div class="section-head">
             <div>
                 <p class="section-kicker">Collection Items</p>
-                <h2>Items in <?php echo html_escape($collectionTitle); ?></h2>
+                <h2>Items in <b><?php echo html_escape($collectionTitle); ?></b></h2>
             </div>
         </div>
         <?php if ($collectionItems): ?>
