@@ -27,13 +27,13 @@ if (!$featuredCollections) {
             <h1><?php echo html_escape($title); ?></h1>
             <p class="hero-lead"><?php echo nl2br(html_escape($text)); ?></p>
 
-            <?php if (get_theme_option('show_home_search')): ?>
+            <!-- <?php if (get_theme_option('show_home_search')): ?>
                 <form class="search-shell" role="search" action="<?php echo html_escape(url('items/browse')); ?>" method="get">
                     <label class="screen-reader-text" for="neptun-search">Search archive</label>
                     <input id="neptun-search" type="search" name="search" placeholder="<?php echo html_escape($placeholder); ?>">
                     <button type="submit">Search</button>
                 </form>
-            <?php endif; ?>
+            <?php endif; ?> -->
 
             <div class="hero-actions">
                 <a class="button-primary" href="<?php echo html_escape(url('items/browse')); ?>">Browse Items</a>
