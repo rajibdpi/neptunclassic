@@ -41,7 +41,16 @@ $titleParts[] = option('site_title');
             </a>
         </div>
 
-        <div class="nav-tools">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="screen-reader-text">Toggle navigation</span>
+            <span class="menu-toggle-box" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+
+        <div class="nav-tools" id="primary-navigation">
             <?php if (get_theme_option('show_nav_search')): ?>
             <form class="nav-search" role="search" action="<?php echo html_escape(url('items/browse')); ?>" method="get">
                 <label class="screen-reader-text" for="nav-search-input">Search archive</label>
