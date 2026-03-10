@@ -6,10 +6,10 @@
             <h1>Browse items</h1>
             <p class="hero-lead">A modern card-based browsing interface for archival collections, image records, reports, and exhibits.</p>
         </div>
-        <form class="search-shell search-shell-inline" role="search" action="<?php echo html_escape(url('items/browse')); ?>" method="get">
+        <!-- <form class="search-shell search-shell-inline" role="search" action="<?php echo html_escape(url('items/browse')); ?>" method="get">
             <input type="search" name="search" value="<?php echo isset($_GET['search']) ? html_escape($_GET['search']) : ''; ?>" placeholder="<?php echo html_escape(neptunclassic_theme_option('search_placeholder', 'Search the archive')); ?>">
             <button type="submit">Search</button>
-        </form>
+        </form> -->
     </div>
 </section>
 
