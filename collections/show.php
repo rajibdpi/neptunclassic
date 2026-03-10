@@ -8,7 +8,7 @@ echo head(array('title' => $collectionTitle, 'bodyclass' => 'collections show'))
     <div class="container">
         <div class="section-head">
             <div>
-                <p class="section-kicker">Collection Items</p>
+                <p class="section-kicker">Collection Items <?php echo count($collectionItems)?></p>
                 <h2>Items in <b><?php echo html_escape($collectionTitle); ?></b></h2>
             </div>
         </div>
