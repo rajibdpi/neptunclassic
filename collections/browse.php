@@ -9,7 +9,13 @@
     </div>
 </section>
 <section class="section-wrap">
-    <div class="container card-grid card-grid-collections">
+    <div class="container archive-toolbar">
+        <div><?php echo pagination_links(); ?></div>
+        <div class="archive-toolbar-actions">
+            <?php echo neptunclassic_layout_switcher('collections-browse-layout', 'neptunclassic-layout-collections-browse'); ?>
+        </div>
+    </div>
+    <div id="collections-browse-layout" class="container card-grid card-grid-collections record-layout record-layout-grid">
         <?php foreach (loop('collections') as $collection): ?>
             <article class="record-card collection-card">
                 <a class="record-thumb" href="<?php echo html_escape(record_url($collection)); ?>"><?php echo neptunclassic_record_thumb($collection); ?></a>
@@ -21,5 +27,6 @@
             </article>
         <?php endforeach; ?>
     </div>
+    <div class="container pagination-bottom"><?php echo pagination_links(); ?></div>
 </section>
 <?php echo foot(); ?>

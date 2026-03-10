@@ -55,11 +55,14 @@ if (!$featuredCollections) {
             <p class="section-kicker">Highlights</p>
             <h2><?php echo html_escape($featuredItemsTitle); ?></h2>
         </div>
-        <a class="text-link" href="<?php echo html_escape(url('items/browse')); ?>">View all items</a>
+        <div class="section-actions">
+            <?php echo neptunclassic_layout_switcher('home-featured-items', 'neptunclassic-layout-home-items', $featuredItemsLayout); ?>
+            <a class="text-link" href="<?php echo html_escape(url('items/browse')); ?>">View all items</a>
+        </div>
     </div>
-    <div class="container card-grid record-layout record-layout-<?php echo html_escape($featuredItemsLayout); ?>">
+    <div id="home-featured-items" class="container card-grid record-layout record-layout-<?php echo html_escape($featuredItemsLayout); ?>">
         <?php foreach ($featuredItems as $item): ?>
-            <article class="record-card<?php if ($featuredItemsLayout === 'list'): ?> record-card-horizontal<?php endif; ?>">
+            <article class="record-card">
                 <a class="record-thumb" href="<?php echo html_escape(record_url($item)); ?>">
                     <?php echo neptunclassic_record_thumb($item); ?>
                 </a>
@@ -80,11 +83,14 @@ if (!$featuredCollections) {
             <p class="section-kicker">Collections</p>
             <h2><?php echo html_escape($featuredCollectionsTitle); ?></h2>
         </div>
-        <a class="text-link" href="<?php echo html_escape(url('collections/browse')); ?>">Browse collections</a>
+        <div class="section-actions">
+            <?php echo neptunclassic_layout_switcher('home-featured-collections', 'neptunclassic-layout-home-collections', $featuredCollectionsLayout); ?>
+            <a class="text-link" href="<?php echo html_escape(url('collections/browse')); ?>">Browse collections</a>
+        </div>
     </div>
-    <div class="container card-grid card-grid-collections record-layout record-layout-<?php echo html_escape($featuredCollectionsLayout); ?>">
+    <div id="home-featured-collections" class="container card-grid card-grid-collections record-layout record-layout-<?php echo html_escape($featuredCollectionsLayout); ?>">
         <?php foreach ($featuredCollections as $collection): ?>
-            <article class="record-card collection-card<?php if ($featuredCollectionsLayout === 'list'): ?> record-card-horizontal<?php endif; ?>">
+            <article class="record-card collection-card">
                 <a class="record-thumb" href="<?php echo html_escape(record_url($collection)); ?>">
                     <?php echo neptunclassic_record_thumb($collection); ?>
                 </a>

@@ -65,6 +65,17 @@ function neptunclassic_layout_option($name, $default = 'grid')
     return $value;
 }
 
+function neptunclassic_layout_switcher($targetId, $storageKey, $currentLayout = 'grid')
+{
+    $layout = $currentLayout === 'list' ? 'list' : 'grid';
+    $switcher = '<div class="layout-switcher" role="group" aria-label="' . html_escape(__('Layout switcher')) . '" data-layout-switcher="' . html_escape($targetId) . '" data-layout-storage="' . html_escape($storageKey) . '" data-default-layout="' . html_escape($layout) . '">';
+    $switcher .= '<button class="layout-switcher-button' . ($layout === 'grid' ? ' is-active' : '') . '" type="button" data-layout="grid" aria-pressed="' . ($layout === 'grid' ? 'true' : 'false') . '">' . html_escape(__('Grid')) . '</button>';
+    $switcher .= '<button class="layout-switcher-button' . ($layout === 'list' ? ' is-active' : '') . '" type="button" data-layout="list" aria-pressed="' . ($layout === 'list' ? 'true' : 'false') . '">' . html_escape(__('List')) . '</button>';
+    $switcher .= '</div>';
+
+    return $switcher;
+}
+
 function neptunclassic_find_manifest_url($item = null)
 {
     if (!$item) {

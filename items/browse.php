@@ -10,11 +10,14 @@
 </section>
 
 <section class="section-wrap">
-    <!-- <div class="container archive-toolbar">
+    <div class="container archive-toolbar">
         <div><?php echo pagination_links(); ?></div>
-        <div><?php echo item_search_filters(); ?></div>
-    </div> -->
-    <div class="container card-grid">
+        <div class="archive-toolbar-actions">
+            <?php echo neptunclassic_layout_switcher('items-browse-layout', 'neptunclassic-layout-items-browse'); ?>
+            <?php echo item_search_filters(); ?>
+        </div>
+    </div>
+    <div id="items-browse-layout" class="container card-grid record-layout record-layout-grid">
         <?php foreach (loop('items') as $item): ?>
             <article class="record-card">
                 <a class="record-thumb" href="<?php echo html_escape(record_url($item)); ?>"><?php echo neptunclassic_record_thumb($item); ?></a>
