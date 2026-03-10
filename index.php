@@ -7,6 +7,8 @@ $placeholder = neptunclassic_theme_option('search_placeholder', 'Search the arch
 $heroImage = neptunclassic_theme_file_url('hero_image', img('hero.jpg'));
 $featuredItemsTitle = neptunclassic_theme_option('featured_items_title', 'Featured items');
 $featuredCollectionsTitle = neptunclassic_theme_option('featured_collections_title', 'Curated sets');
+$featuredItemsLayout = neptunclassic_layout_option('featured_items_layout', 'grid');
+$featuredCollectionsLayout = neptunclassic_layout_option('featured_collections_layout', 'grid');
 $featuredCount = (int) neptunclassic_theme_option('featured_items_count', 6);
 if ($featuredCount < 1) $featuredCount = 6;
 $collectionCount = (int) neptunclassic_theme_option('featured_collections_count', 4);
@@ -55,9 +57,9 @@ if (!$featuredCollections) {
         </div>
         <a class="text-link" href="<?php echo html_escape(url('items/browse')); ?>">View all items</a>
     </div>
-    <div class="container card-grid">
+    <div class="container card-grid record-layout record-layout-<?php echo html_escape($featuredItemsLayout); ?>">
         <?php foreach ($featuredItems as $item): ?>
-            <article class="record-card">
+            <article class="record-card<?php if ($featuredItemsLayout === 'list'): ?> record-card-horizontal<?php endif; ?>">
                 <a class="record-thumb" href="<?php echo html_escape(record_url($item)); ?>">
                     <?php echo neptunclassic_record_thumb($item); ?>
                 </a>
@@ -80,9 +82,9 @@ if (!$featuredCollections) {
         </div>
         <a class="text-link" href="<?php echo html_escape(url('collections/browse')); ?>">Browse collections</a>
     </div>
-    <div class="container card-grid card-grid-collections">
+    <div class="container card-grid card-grid-collections record-layout record-layout-<?php echo html_escape($featuredCollectionsLayout); ?>">
         <?php foreach ($featuredCollections as $collection): ?>
-            <article class="record-card collection-card">
+            <article class="record-card collection-card<?php if ($featuredCollectionsLayout === 'list'): ?> record-card-horizontal<?php endif; ?>">
                 <a class="record-thumb" href="<?php echo html_escape(record_url($collection)); ?>">
                     <?php echo neptunclassic_record_thumb($collection); ?>
                 </a>

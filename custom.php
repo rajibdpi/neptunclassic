@@ -49,6 +49,22 @@ function neptunclassic_excerpt($text, $words = 28)
     return implode(' ', array_slice($parts, 0, $words)) . '…';
 }
 
+function neptunclassic_layout_option($name, $default = 'grid')
+{
+    $value = strtolower(trim((string) get_theme_option($name)));
+    $allowed = array('grid', 'list');
+
+    if (!in_array($value, $allowed, true)) {
+        $value = $default;
+    }
+
+    if (!in_array($value, $allowed, true)) {
+        $value = 'grid';
+    }
+
+    return $value;
+}
+
 function neptunclassic_find_manifest_url($item = null)
 {
     if (!$item) {
